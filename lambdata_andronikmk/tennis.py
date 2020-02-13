@@ -3,13 +3,11 @@ Tennis Player Class
 """
 import random
 
-class TennisPlayer():
+class TennisPlayer:
     """
     Tennis player statistics
     """
-    def __init__(self, name, age=1,
-                 fourhand_winner=1, backhand_winner=1,
-                 unforced_error=1, aces=1, double_faults=1):
+    def __init__(self, name):
         self.name = name
         self.age = random.randint(18, 38)
         self.fourhand_winners = random.randint(1, 42)
@@ -25,6 +23,7 @@ class TennisPlayer():
         d = self.aces
         e = b + c + d
         if a > e:
-            print('The player has lost the match.')
+            result = 'The player has lost the match.'
         else:
-            print('The player has won the match.')
+            result = 'The player has won the match.'
+        return result
