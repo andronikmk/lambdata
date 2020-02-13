@@ -1,1 +1,0 @@
-andronik@andronik-ThinkPad-T430.5435:1581517446
