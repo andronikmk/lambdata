@@ -1,10 +1,14 @@
 import pandas
+
+
 class DataFrameTransformer(object):
     def __init__(self, df):
-        """Param df pandas dataframe with column name "abbrevs" """
+        """Param df pandas DataFrame with column name "abbrevs" """
         self.df = df
+
     def inspect_data(self):
         print(self.df.head())
+
     def add_state_names(self):
         """
         State abbreviation -> Full Name and visa versa.
@@ -17,10 +21,12 @@ class DataFrameTransformer(object):
             "DC": "Wash DC",
             "TX": "Texas"
         }
-        #breakpoint()
+
         my_col = self.df["abbrevs"]
         other_col = my_col.map(names_map)
         self.df["state_name"] = other_col
+
+
 if __name__ == "__main__":
     df = pandas.DataFrame({"abbrevs": ["CA", "CO", "CT", "DC", "TX"]})
     transformer = DataFrameTransformer(df)
