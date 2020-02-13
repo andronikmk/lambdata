@@ -8,3 +8,6 @@ folder. Includes:
  - scratch.py
  - tennis.py
  - tennis_test.py
+
+Finally, tennis.py has a test which is tennis_test.py
+ - run files in the same directory.
